@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Application</title>
+</head>
+<body>
+
+    <h3>Welcome to Sample Web Application!</h3>
+
+    <p>Hello, World!</p>
+
+    <script>
+        let name = "Shiva Ram";
+        console.log("Name is: " + name);
+
+        let age = 18;
+        console.log("Age is: " + age);
+
+        function Employee(Name, empid, comp = 'Microsoft') {
+            console.log(`Employee Name: ${Name}
+            Employee Id: ${empid}
+            Company: ${comp}`);
+        }
+        Employee('Ram', 143);
+        Employee('Raj', 156);
+        Employee('Ragu', 196);
+
+        let data = function()
+        {
+            return "Hello! from data!";
+        }
+        console.log("Data: " + data());
+        let data1 = () => {
+            return "Hello from data1!";
+        }
+        console.log("Data1: " + data1());
+        let data2 = (a, b) => {
+            return a + b;
+        }
+        console.log("Data2: " + data2(44,1));
+        function sece(callback)
+        {
+            console.log("This is sece function");
+        }
+        function stu()
+        {
+            console.log("This is stu function");
+        }
+        sece(stu());
+        let fetch_api = new Promise((resolve, reject) => {
+            let check = true;
+            if (check) {
+                resolve("Success");
+            } else {
+                setTimeout(() => {
+                    reject("Failed");
+                }, 1000);
+            }
+        });
+        fetch_api.then((res) => {
+            console.log("API Response: " + res);
+        }).catch((err) => {
+            console.log("API Error: " + err);
+        });
+    </script>
+
+    <a href="https://chatgpt.com/">Visit ChatGPT</a>
+
+    <br><br>
+
+    <table border="1">
+        <tr>
+            <th>Student ID</th>
+            <th>Student Name</th>
+        </tr>
+
+        <tr>
+            <td>101</td>
+            <td>Shiva</td>
+        </tr>
+
+        <tr>
+            <td>102</td>
+            <td>Mohan</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+</body>
+</html>
